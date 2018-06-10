@@ -8,11 +8,11 @@ install:
 
 configuration:
   - Release
-  - Debug
+  #- Debug
 
 platform:
   - Win32
-  - x64
+  #- x64
 build_script:
 - cmd: >-
     set SLN_FILE=sakura.sln
