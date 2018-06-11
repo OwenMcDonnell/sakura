@@ -25,7 +25,7 @@ build_script:
   - cmd: set MSBUILD_EXE="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe"
 
   - cmd: echo %MSBUILD_EXE% %SLN_FILE% /p:Platform=%PLATFORM% /p:Configuration=%CONFIGURATION% /t:"Clean","Rebuild"  %EXTRA_CMD%
-  - cmd: %MSBUILD_EXE% %SLN_FILE% /p:Platform=%PLATFORM% /p:Configuration=%CONFIGURATION% /t:"Clean","Rebuild"  %EXTRA_CMD%
+  - cmd: "%MSBUILD_EXE% %SLN_FILE% /p:Platform=%PLATFORM% /p:Configuration=%CONFIGURATION% /t:"Clean","Rebuild"  %EXTRA_CMD%"
  
   - cmd: echo appveyor_yml
 
