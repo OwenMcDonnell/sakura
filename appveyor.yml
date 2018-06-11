@@ -14,22 +14,22 @@ platform:
   - Win32
   #- x64
 build_script:
-  - cmd: >-
-      set SLN_FILE=sakura.sln
+- cmd: >-
+    set SLN_FILE=sakura.sln
 
-      echo PLATFORM %PLATFORM%
+    echo PLATFORM %PLATFORM%
 
-      echo CONFIGURATION %CONFIGURATION%
+    echo CONFIGURATION %CONFIGURATION%
 
-      set EXTRA_CMD=/verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+    set EXTRA_CMD=/verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
-      set MSBUILD_EXE="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe"
+    set MSBUILD_EXE="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe"
 
-      echo %MSBUILD_EXE% %SLN_FILE% /p:Platform=%PLATFORM% /p:Configuration=%CONFIGURATION% /t:"Clean","Rebuild" %EXTRA_CMD%
+    echo %MSBUILD_EXE% %SLN_FILE% /p:Platform=%PLATFORM% /p:Configuration=%CONFIGURATION% /t:"Clean","Rebuild" %EXTRA_CMD%
 
-      %MSBUILD_EXE% %SLN_FILE% /p:Platform=%PLATFORM% /p:Configuration=%CONFIGURATION% /t:"Clean","Rebuild" %EXTRA_CMD%
+    %MSBUILD_EXE% %SLN_FILE% /p:Platform=%PLATFORM% /p:Configuration=%CONFIGURATION% /t:"Clean","Rebuild" %EXTRA_CMD%
 
-      echo appveyor_yml
+    echo appveyor_yml
   #- cmd: set SLN_FILE=sakura.sln
 
   #- cmd: echo PLATFORM      %PLATFORM%
