@@ -1,17 +1,12 @@
 version: 1.0.{build}
 image: Visual Studio 2017
 init:
-<<<<<<< HEAD
+
   - ps: Set-WinSystemLocale ja-JP
   - ps: Start-Sleep -s 5
   - ps: Restart-Computer
   - ps: Start-Sleep -s 5
-=======
-- ps: Set-WinSystemLocale ja-JP
-- ps: Start-Sleep -s 5
-- ps: Restart-Computer
-- ps: Start-Sleep -s 5
->>>>>>> upstream/master
+
 
 configuration:
   - Release
